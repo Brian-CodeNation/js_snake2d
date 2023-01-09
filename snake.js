@@ -8,16 +8,19 @@ class SnakePart {
   }
 }
 
-let speed = 7;
+// initialise values
+let speed = 7;   // speed of snake
 
 let tileCount = 20;
 let tileSize = canvas.width / tileCount - 2;
 
-let headX = 10;
-let headY = 10;
+// Initialise the snake parts
+let headX = 15;
+let headY = 15;
 const snakeParts = [];
 let tailLength = 2;
 
+// Starting food position
 let appleX = 5;
 let appleY = 5;
 
