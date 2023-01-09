@@ -48,7 +48,9 @@ function drawGame() {
   clearScreen();
 
   checkAppleCollision();
+
   drawApple();
+
   drawSnake();
 
   drawScore();
@@ -151,13 +153,14 @@ function drawApple() {
 }
 
 function checkAppleCollision() {
-  if (appleX === headX && appleY == headY) {
-    appleX = Math.floor(Math.random() * tileCount);
-    appleY = Math.floor(Math.random() * tileCount);
-    tailLength++;
-    score++;
-    gulpSound.play();
-  }
+    // If the head and apple are in the same x, y coord, then
+    if (appleX === headX && appleY == headY) {
+        appleX = Math.floor(Math.random() * tileCount);
+        appleY = Math.floor(Math.random() * tileCount);
+        tailLength++;
+        score++;
+        gulpSound.play();
+    }
 }
 
 document.body.addEventListener("keydown", keyDown);
